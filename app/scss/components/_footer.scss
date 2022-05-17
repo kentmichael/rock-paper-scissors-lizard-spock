@@ -1,8 +1,13 @@
 @use "../util/" as *;
 
 footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding-bottom: rem(30);
+
   @include breakpoint-up(large) {
-    justify-self: flex-end;
+    justify-content: flex-end;
   }
 
   button {
@@ -16,5 +21,11 @@ footer {
     text-transform: uppercase;
     letter-spacing: rem(3);
     cursor: pointer;
+    transition: all 200ms ease-in;
+
+    &:hover {
+      border-color: var(--header-outline);
+      color: var(--header-outline);
+    }
   }
 }

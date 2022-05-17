@@ -1,0 +1,337 @@
+@use "../util/" as *;
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.start {
+  margin-bottom: rem(123);
+  width: 100%;
+  max-width: rem(475);
+  background-image: url("../images/bg-pentagon.svg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: 80% 80%;
+
+  @include breakpoint-up(large) {
+    margin-bottom: 0;
+  }
+
+  button {
+    position: relative;
+    width: rem(100);
+    height: rem(100);
+    border-radius: 50%;
+    border-width: rem(11);
+    border-style: solid;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: rem(34) rem(38);
+    cursor: pointer;
+
+    @include breakpoint-up(medium) {
+      width: rem(120);
+      height: rem(120);
+      border-width: rem(14);
+    }
+
+    @include breakpoint-up(large) {
+      width: rem(145);
+      height: rem(145);
+      border-width: rem(17);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      display: block;
+      border-radius: inherit;
+      width: 100%;
+      height: 100%;
+      border-top: rem(5) solid hsla(217, 16%, 45%, 0.5);
+    }
+
+    &:focus {
+      transform: translateY(5px);
+      box-shadow: none;
+
+      &::before {
+        border-top: none;
+      }
+    }
+  }
+
+  &__blk1 {
+    margin-bottom: rem(24);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: rem(186);
+
+    @include breakpoint-up(large) {
+      margin-bottom: rem(37);
+      height: rem(279);
+    }
+
+    &--scissors {
+      align-self: flex-start;
+      border-color: var(--scissors-grad-to);
+      background-image: url("../images/icon-scissors.svg");
+      box-shadow: 0 rem(5) var(--scissors-grad-from);
+    }
+
+    &--spock {
+      border-color: var(--cyan-to);
+      background-image: url("../images/icon-spock.svg");
+      box-shadow: 0 rem(5) var(--cyan-from);
+    }
+
+    &--paper {
+      border-color: var(--paper-grad-to);
+      background-image: url("../images/icon-paper.svg");
+      box-shadow: 0 rem(5) var(--paper-grad-from);
+    }
+  }
+
+  &__blk2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+
+    &--lizard {
+      border-color: var(--lizard-grad-to);
+      background-image: url("../images/icon-lizard.svg");
+      box-shadow: 0 rem(5) var(--lizard-grad-from);
+    }
+
+    &--rock {
+      border-color: var(--rock-grad-to);
+      background-image: url("../images/icon-rock.svg");
+      box-shadow: 0 rem(5) var(--rock-grad-from);
+    }
+  }
+}
+
+.end {
+  width: 100%;
+  max-width: rem(700);
+  margin-bottom: rem(50);
+
+  @include breakpoint-up(large) {
+    max-width: rem(940);
+    margin-bottom: rem(28);
+  }
+
+  &__blk1 {
+    margin-bottom: rem(88);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+
+    @include breakpoint-down(xsmall) {
+      justify-content: space-between;
+    }
+
+    @include breakpoint-up(large) {
+      justify-content: space-between;
+      margin-bottom: 0;
+    }
+
+    div {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      gap: rem(27);
+      color: var(--white);
+      font-size: rem(12);
+      letter-spacing: rem(2);
+      text-transform: uppercase;
+
+      @include breakpoint-up(large) {
+        gap: rem(68);
+        font-size: rem(20);
+
+        span {
+          order: 1;
+        }
+
+        button {
+          order: 2;
+        }
+      }
+    }
+
+    button {
+      position: relative;
+      width: rem(134);
+      height: rem(134);
+      border-radius: 50%;
+      border-width: rem(16);
+      border-style: solid;
+      padding: 0;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: rem(56) rem(54);
+      pointer-events: none;
+
+      @include breakpoint-up(medium) {
+        width: rem(246);
+        height: rem(240);
+        border-width: rem(27);
+        background-size: rem(83) rem(96);
+      }
+
+      @include breakpoint-up(large) {
+        width: rem(296);
+        height: rem(290);
+        border-width: rem(37);
+        background-size: rem(103) rem(116);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        display: block;
+        border-radius: inherit;
+        width: 100%;
+        height: 100%;
+        border-top: rem(5) solid hsla(217, 16%, 45%, 0.5);
+
+        @include breakpoint-up(large) {
+          border-top: rem(10) solid hsla(217, 16%, 45%, 0.5);
+        }
+      }
+    }
+
+    &--picking {
+      border-color: var(--radial-grad-from);
+      background-color: hsla(237, 49%, 15%, 0.5);
+
+      &::before {
+        content: "";
+        border-top: none !important;
+      }
+    }
+
+    &--lizard {
+      border-color: var(--lizard-grad-to);
+      background-image: url("../images/icon-lizard.svg");
+      box-shadow: 0 rem(10) var(--lizard-grad-from);
+    }
+
+    &--rock {
+      border-color: var(--rock-grad-to);
+      background-image: url("../images/icon-rock.svg");
+      box-shadow: 0 rem(10) var(--rock-grad-from);
+    }
+
+    &--scissors {
+      border-color: var(--scissors-grad-to);
+      background-image: url("../images/icon-scissors.svg");
+      box-shadow: 0 rem(10) var(--scissors-grad-from);
+    }
+
+    &--spock {
+      border-color: var(--cyan-to);
+      background-image: url("../images/icon-spock.svg");
+      box-shadow: 0 rem(10) var(--cyan-from);
+    }
+
+    &--paper {
+      border-color: var(--paper-grad-to);
+      background-image: url("../images/icon-paper.svg");
+      box-shadow: 0 rem(10) var(--paper-grad-from);
+    }
+
+    &--result {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+
+      @include breakpoint-down(medium) {
+        display: none;
+      }
+
+      h2 {
+        margin-bottom: rem(25);
+        color: var(--white);
+        font-size: rem(41);
+        text-transform: uppercase;
+      }
+
+      button {
+        width: fit-content;
+        height: fit-content;
+        border: none;
+        border-radius: rem(10);
+        padding-block: rem(19);
+        padding-inline: rem(63);
+        background-color: var(--white);
+        color: var(--radial-grad-to);
+        font-size: rem(12);
+        text-transform: uppercase;
+        letter-spacing: rem(2);
+        cursor: pointer;
+        pointer-events: all;
+        transition: opacity 200ms ease-in;
+
+        &::before {
+          content: "";
+          border: none;
+        }
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  &__blk2 {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: rem(25);
+
+    @include breakpoint-up(large) {
+      display: none;
+    }
+
+    h2 {
+      color: var(--white);
+      font-size: rem(40);
+      text-transform: uppercase;
+    }
+
+    button {
+      border: none;
+      border-radius: rem(10);
+      padding-block: rem(19);
+      padding-inline: rem(63);
+      background-color: var(--white);
+      color: var(--radial-grad-to);
+      font-size: rem(12);
+      text-transform: uppercase;
+      letter-spacing: rem(2);
+      cursor: pointer;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
