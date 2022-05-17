@@ -1,6 +1,5 @@
-@use '../util/' as *;
+@use "../util/" as *;
 
 .container {
-  max-width: rem(1080);
-  margin: 0 auto;
+  margin: rem(30);
 }

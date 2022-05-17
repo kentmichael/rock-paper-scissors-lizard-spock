@@ -1,4 +1,4 @@
-@use '../util/' as *;
+@use "../util/" as *;
 
 html {
   box-sizing: border-box;
@@ -13,6 +13,9 @@ html {
 }
 
 body {
+  display: grid;
+  place-items: center;
   padding: 0;
   margin: 0;
+  background-color: var(--radial-grad-from);
 }

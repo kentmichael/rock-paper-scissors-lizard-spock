@@ -1,0 +1,20 @@
+@use "../util/" as *;
+
+footer {
+  @include breakpoint-up(large) {
+    justify-self: flex-end;
+  }
+
+  button {
+    border: rem(2) solid var(--white);
+    border-radius: rem(10);
+    padding-block: rem(14);
+    padding-inline: rem(38);
+    background-color: transparent;
+    color: var(--white);
+    font-size: rem(12);
+    text-transform: uppercase;
+    letter-spacing: rem(3);
+    cursor: pointer;
+  }
+}

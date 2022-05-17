@@ -1,15 +1,20 @@
 :root {
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
-  --scissors-grad-from: hsl(39, 89%, 49%);
+  // --scissors-grad-from: hsl(39, 89%, 49%);
+  --scissors-grad-from: hsl(39, 89%, 29%);
   --scissors-grad-to: hsl(40, 84%, 53%);
-  --paper-grad-from: hsl(230, 89%, 62%);
+  // --paper-grad-from: hsl(230, 89%, 62%);
+  --paper-grad-from: hsl(230, 89%, 42%);
   --paper-grad-to: hsl(230, 89%, 65%);
-  --rock-grad-from: hsl(349, 71%, 52%);
+  // --rock-grad-from: hsl(349, 71%, 52%);
+  --rock-grad-from: hsl(349, 71%, 32%);
   --rock-grad-to: hsl(349, 70%, 56%);
-  --lizard-grad-to: hsl(261, 73%, 60%);
-  --lizard-grad-from: hsl(261, 72%, 63%);
-  --cyan-from: hsl(189, 59%, 53%);
+  // --lizard-grad-from: hsl(261, 73%, 60%);
+  --lizard-grad-from: hsl(261, 73%, 40%);
+  --lizard-grad-to: hsl(261, 72%, 63%);
+  // --cyan-from: hsl(189, 59%, 53%);
+  --cyan-from: hsl(189, 59%, 33%);
   --cyan-to: hsl(189, 58%, 57%);
   --dark-text: hsl(229, 25%, 31%);
   --score-text: hsl(229, 64%, 46%);
