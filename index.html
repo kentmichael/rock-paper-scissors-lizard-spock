@@ -24,7 +24,7 @@
     <header class="header container">
       <nav>
         <img src="images/logo-bonus.svg" alt="Application Logo" />
-        <h1>Score<span id="score">0</span></h1>
+        <h1>Score<span id="score-board">0</span></h1>
       </nav>
     </header>
     <main class="container">
@@ -62,7 +62,7 @@
       <div class="end hide">
         <div class="end__blk1">
           <div>
-            <button id="user"></button>
+            <button id="user" aria-label="User picked"></button>
             <span>You picked</span>
           </div>
           <section class="end__blk1--result">
@@ -70,7 +70,7 @@
             <button class="play-again">Play again</button>
           </section>
           <div>
-            <button id="computer"></button>
+            <button id="computer" aria-label="Computer picked"></button>
             <span>The house picked</span>
           </div>
         </div>

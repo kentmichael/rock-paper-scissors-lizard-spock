@@ -283,6 +283,7 @@ main {
         background-color: var(--white);
         color: var(--radial-grad-to);
         font-size: rem(12);
+        font-weight: 700;
         text-transform: uppercase;
         letter-spacing: rem(2);
         cursor: pointer;
@@ -325,6 +326,7 @@ main {
       background-color: var(--white);
       color: var(--radial-grad-to);
       font-size: rem(12);
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: rem(2);
       cursor: pointer;
@@ -334,4 +336,35 @@ main {
 
 .hide {
   display: none;
+}
+
+.transition {
+  visibility: hidden;
+
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
+
+.desktop-width {
+  max-width: rem(663);
+}
+
+.winner {
+  z-index: -1;
+  box-shadow: rem(1) rem(-1) rem(1) rem(30) hsla(217, 16%, 40%, 0.3),
+    rem(1) rem(-1) rem(1) rem(60) hsla(217, 16%, 40%, 0.2),
+    rem(1) rem(-1) rem(1) rem(90) hsla(217, 16%, 40%, 0.1);
+
+  @include breakpoint-up(medium) {
+    box-shadow: rem(1) rem(-1) rem(1) rem(40) hsla(217, 16%, 40%, 0.3),
+      rem(1) rem(-1) rem(1) rem(80) hsla(217, 16%, 40%, 0.2),
+      rem(1) rem(-1) rem(1) rem(120) hsla(217, 16%, 40%, 0.1);
+  }
+
+  @include breakpoint-up(large) {
+    box-shadow: rem(1) rem(-1) rem(1) rem(60) hsla(217, 16%, 40%, 0.3),
+      rem(1) rem(-1) rem(1) rem(120) hsla(217, 16%, 40%, 0.2),
+      rem(1) rem(-1) rem(1) rem(200) hsla(217, 16%, 40%, 0.1);
+  }
 }
