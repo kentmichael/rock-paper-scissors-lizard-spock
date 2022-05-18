@@ -32,6 +32,13 @@ const createModal = () => {
   document.body.classList.add("fixed")
 }
 
+window.addEventListener("keydown", (e) => {
+  if (document.querySelector(".rules") && e.key === "Escape") {
+    document.querySelector(".rules").remove()
+    document.body.classList.remove("fixed")
+  }
+})
+
 class Player {
   _options = [
     {

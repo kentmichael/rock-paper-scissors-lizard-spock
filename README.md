@@ -36,5 +36,4 @@ If the player wins, they gain 1 point. If the computer wins, the player loses on
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
